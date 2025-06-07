@@ -4,8 +4,8 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /source
 
 # copy csproj and restore as distinct layers
-COPY ["WebCrotApi/WebCrotApi.csproj", "WebCrotApi/"]
-RUN dotnet restore "WebCrotApi/WebCrotApi.csproj"
+COPY ["GidXn-Docker.csproj", "GidXn-Docker/"]
+RUN dotnet restore "GidXn-Docker/GidXn-Docker.csproj"
 
 # copy everything else and build app
 COPY . .
